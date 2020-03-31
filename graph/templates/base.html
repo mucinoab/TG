@@ -4,17 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
+font-awesome.min.css">
 
 <!--  /*latex*/-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">  
   </script>
+<!--  /*end latex*/-->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3.v3.js"></script>
 
-<style>
+<style type="text/css">
   body {
   background-color: #bd9c6c;
+  font: 10px sans-serif;
 }
 h1,p {
   font-family: "Montserrat", sans-serif;
@@ -32,6 +38,77 @@ canvas{
 }
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
+ #container{
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+
+    #text-explain {
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 1em;
+    }
+
+    .alert {
+      color: tomato;
+    }
+svg {
+  background-color: #FFF;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
 </style>
 <body>
 
@@ -63,20 +140,9 @@ img {margin-bottom: -7px}
 </div>
 
 <body>
-<!--  {% block content %}-->
-<!--  {% endblock %}-->
-<div>
-<canvas id="principal" >
+{% block content %}
+{% endblock content %}
 
-</canvas>
-</div>
-<div>
-  <p>
-  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-</p>
-</div>
-</body>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:150px">
