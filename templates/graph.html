@@ -1,6 +1,9 @@
 {%extends 'base.html'%}
 {%block content%}
+<<<<<<< HEAD:templates/graph.html
+=======
   <h3 style = "text-align: center;">Coloured grids</h3>
+>>>>>>> master:graph/templates/graph.html
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <div id = "container" ></div>
 <script>
@@ -255,10 +258,39 @@ function restart() {
     .force('link').links(links);
 
   force.alphaTarget(0.0).restart();
-  console.log(nodes);
-  console.log(links);
+var lista_ady  = [];
+var map = new Map();
+for(var y = 0;y<nodes.length;y++){
+  lista_ady.push({
+    nodo : nodes[y].id,
+    lista : [],
+  });
+  map.set(nodes[y].id,y);
+  if(nodes[y].reflexive)
+    lista_ady[y].lista.push(nodes[y].id);
 }
-
+  
+for(var y =0;y <links.length;y++){
+  lista_ady[links[y].source.id].lista.push(links[y].target.id);
+}
+for(var y = 0;y <nodes.length;y++){
+  console.log("-"+lista_ady[y].nodo);
+    for(var t =0; t <lista_ady[y].lista.length;t++)
+      console.log(lista_ady[y].lista[t]);
+}
+  returnJsonTop(lista_ady);
+  //returnJsonTop(links);
+      
+}
+//ajax si
+function returnJsonTop(type){
+    $.ajax({
+      method: 'POST',
+      url: 'graph/json/returnjson',
+      dataType: 'json',
+      data:  JSON.stringify(type,null,4),
+  });
+}
 function mousedown() {
   // because :active only works in WebKit?
   svg.classed('active', true);
