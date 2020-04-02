@@ -17,7 +17,7 @@ class matrix:
         incidence_matrix = nx.incidence_matrix(G,nodelist= nodes, oriented=True) 
         adjacency_matrix = nx.adjacency_matrix(G,nodelist=nodes,weight = '1')
         print(incidence_matrix.toarray())
-        print(A.toarray())
+        print(adjacency_matrix.toarray())
 
 @csrf_exempt
 def returnjson(request):
@@ -29,8 +29,8 @@ def returnjson(request):
             nodos.append(data[a]['nodo'])
             for b in range(0,len(data[a]['lista'])):
                 edges.append([data[a]['nodo'],   data[a]['lista'][b]])
-        print(edges)
-        print(nodos)
+#         print(edges)
+#         print(nodos)
         ady = matrix()
         ady.adyacencia(nodos,edges)
         return HttpResponse("ok")
