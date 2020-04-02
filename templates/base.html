@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
 font-awesome.min.css">
+<link href="http://allfont.es/allfont.css?fonts=monoton" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Fauna One' >
 
 <!--  /*latex*/-->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -20,12 +22,20 @@ font-awesome.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
   body {
-  background-color: #bd9c6c;
+  background-image: url(https://images7.alphacoders.com/427/427412.png);
   font: 10px sans-serif;
 }
-h1,p {
-  font-family: "Montserrat", sans-serif;
+h1 {
+  font-family: "Monoton", arial;
+  color:#FFFFFF;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
 }
+p, h3{
+  font-family: "Fauna one";
+  color: #FFFFFF;
+  font-size: 15px;
+  }
 canvas{
   border:2px solid;
      padding-left: 0;
@@ -33,14 +43,15 @@ canvas{
     margin-left: auto;
     margin-right: auto;
     display: block;
-  background-color: #decdb5;
+  background-color: #AACEF0;
   width:720px ;
   height:400px;
 }
-img {margin-bottom: -7px}
+img { margin-bottom: -7px;}
+  }
 .w3-row-padding img {margin-bottom: 12px}
  #container{
-    max-width: 400px;
+    max-width: 650px;
     height: 400px;
     margin: auto;
   }
@@ -55,6 +66,10 @@ img {margin-bottom: -7px}
       color: tomato;
     }
 svg {
+  border-style: outset;
+  border-color: #F0BDAA;
+  border-radius: 8px;
+  border-width: 8px;
   background-color: #FFF;
   cursor: default;
   -webkit-user-select: none;
@@ -114,14 +129,13 @@ text.id {
 <body>
 
 <!-- Sidebar -->
-<nav class="w3-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px; background-color: #bd9c6ce0;" id="mySidebar">
+<nav class="w3-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px; background-color: #AACEF0;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
     <i class="fa fa-remove"></i>
   </a>
   <div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Inicio</a>
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Conceptos</a>
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Gráfica</a>
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Tutorial</a>
   </div>
 </nav>
@@ -134,7 +148,7 @@ text.id {
 <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
 <div class="w3-clear"></div>
 <header class="w3-center w3-margin-bottom">
-  <h1 ><b>Grafos y Más</b></h1>
+  <h1>Grafos  y  Más</h1>
   <p><b>Diseñado para Generar Matrices de Gráficas</b></p>
 
 </header>
@@ -148,7 +162,7 @@ text.id {
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:150px">
   <a href= "https://github.com/mucinoab/TG" class="fa fa-github hover-opacity">Github</a>
-  <p class="w3-medium">By D.M.B.Y.</p>
+  <p class="w3-medium" style="color: #232527">By D.M.B.Y.</p>
 </footer>
 
 <script>
