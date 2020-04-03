@@ -7,7 +7,6 @@
   <h3 id = "matriz_adyacencia" style = "text-align: center;" ></h3>
   <h3 id = "matriz_incidencia" style = "text-align: center;" ></h3>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-
     <div id = "container" ></div>
    
 
@@ -305,7 +304,7 @@ function returnJsonTop(type){
       }
     })
 }
-function ajaxax_info(data){
+function ajax_info(data){
   //document.getElementById("demo").innerHTML = data['adya'];
   katex.render(data['adya'], matriz_adyacencia);
   katex.render(data['inci'], matriz_incidencia);
