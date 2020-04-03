@@ -1,6 +1,8 @@
 {%extends 'base.html'%}
 {%block content%}
+
   <h3 style = "text-align: center;">Coloured grids</h3>
+
 
   <h3 id = "matriz_adyacencia" style = "text-align: center;" ></h3>
   <h3 id = "matriz_incidencia" style = "text-align: center;" ></h3>
@@ -285,7 +287,7 @@ for(var y = 0;y <nodes.length;y++){
   //returnJsonTop(links);
       
 }
-//ajax siiii
+//ajax si
 function returnJsonTop(type){
     var context;
     $.ajax({
@@ -303,7 +305,7 @@ function returnJsonTop(type){
       }
     })
 }
-function ajax_info(data){
+function ajaxax_info(data){
   //document.getElementById("demo").innerHTML = data['adya'];
   katex.render(data['adya'], matriz_adyacencia);
   katex.render(data['inci'], matriz_incidencia);
