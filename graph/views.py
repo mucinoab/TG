@@ -48,7 +48,18 @@ def returnjson(request):
         request.session['context'] = context
         return HttpResponse("ok")
 
-def sendjson(request):
-    context = request.session["context"]
-    print(context)
-    return JsonResponse(context,safe=False) 
+# def sendjson(request):
+#     context = request.session["context"]
+#     print(context)
+#     return JsonResponse(context,safe=False) 
+
+
+def sendjson (request):
+    
+    if 'context' in request.session:
+        context = request.session["context"]
+        print(context)
+        return JsonResponse(context,safe=False)     
+    else:
+        context = 0
+        return JsonResponse(context,safe=False)
