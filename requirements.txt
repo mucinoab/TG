@@ -14,8 +14,6 @@ whitenoise==5.0.1
 decorator==4.4.2
 Django==3.0.4
 networkx==2.4
-numpy==1.18.2
 pytz==2019.3
-scipy==1.4.1
 sqlparse==0.3.1
 sympy==1.5.1
