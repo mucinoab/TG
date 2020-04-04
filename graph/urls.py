@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from . import views
-from .views import graph,returnjson,sendjson
+from .views import graph
 
 urlpatterns = [
     url(r'^$', graph),

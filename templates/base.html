@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-<title>Graphics and  More</title>
+<title>Graphics and More</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
-font-awesome.min.css">
-<link href="http://allfont.es/allfont.css?fonts=monoton" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Fauna One' >
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
+font-awesome.min.css" rel="stylesheet">
+<link href="http://allfont.es/allfont.css?fonts=monoton" rel="stylesheet" type="text/css"/>
+<link href='https://fonts.googleapis.com/css?family=Fauna One' rel="stylesheet">
 
 <!--  /*latex*/--
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -17,189 +16,238 @@ font-awesome.min.css">
   </script>
 <--  /*end latex*/-->
 <!-- d3 -->
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-  <script src="https://d3js.org/d3.v3.js"></script>
- <!-- fin d3 -->
- <!--katex-->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3.v3.js"></script>
+<!-- fin d3 -->
+<!--katex-->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" rel="stylesheet">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script crossorigin="anonymous" defer
+        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+        src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
 
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script> 
- <!--fin katex-->       
- <!-- jquery-->
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script crossorigin="anonymous" defer
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+        onload="renderMathInElement(document.body);"
+        src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+<!--fin katex-->
+<!-- jquery-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
-  body {
-  background-image: url(https://images7.alphacoders.com/427/427412.png);
-  font: 10px sans-serif;
-}
-h1 {
-  font-family: "Monoton", arial;
-  color:#FFFFFF;
-  font-size: 48px;
-  text-shadow: 4px 4px 4px #aaa;
-}
-p, h3{
-  font-family: "Fauna one";
-  color: #FFFFFF;
-  font-size: 15px;
-  }
-canvas{
-  border:2px solid;
-     padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  background-color: #AACEF0;
-  width:720px ;
-  height:400px;
-}
-img { margin-bottom: -7px;}
-  }
-.w3-row-padding img {margin-bottom: 12px}
- #container{
-    max-width: 650px;
-    height: 400px;
-    margin: auto;
-  }
+    body {
+        /*background-image: url(https://images7.alphacoders.com/427/427412.png);*/
+        background-image: url(https://static.vecteezy.com/system/resources/previews/000/598/564/original/abstract-colorful-low-poly-vector-background-with-warm-gradient-futuristic-pattern.jpg);
+
+        font: 10px sans-serif;
+    }
+
+    h1 {
+        font-family: "Monoton", arial;
+        color: #FFFFFF;
+        font-size: 48px;
+        text-shadow: 4px 4px 4px #aaa;
+    }
+
+    p, h3 {
+        font-family: "Fauna one";
+        color: #191919;
+        font-size: 15px;
+    }
+
+    canvas {
+        border: 2px solid;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: #AACEF0;
+        width: 720px;
+        height: 400px;
+    }
+
+    img {
+        margin-bottom: -7px;
+    }
+
+    }
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+
+    #container {
+        max-width: 650px;
+        height: 400px;
+        margin: auto;
+    }
 
     #text-explain {
-      display: inline-block;
-      font-size: 0.75em;
-      margin-bottom: 1em;
+        display: inline-block;
+        font-size: 0.75em;
+        margin-bottom: 1em;
     }
 
     .alert {
-      color: tomato;
+        color: tomato;
     }
-svg {
-  border-style: outset;
-  border-color: #F0BDAA;
-  border-radius: 8px;
-  border-width: 8px;
-  background-color: #FFF;
-  cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
 
-svg:not(.active):not(.ctrl) {
-  cursor: crosshair;
-}
+    svg {
+        border-style: outset;
+        border-color: #F0BDAA;
+        border-radius: 8px;
+        border-width: 8px;
+        background-color: #FFF;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
 
-path.link {
-  fill: none;
-  stroke: #000;
-  stroke-width: 4px;
-  cursor: default;
-}
+    svg:not(.active):not(.ctrl) {
+        cursor: crosshair;
+    }
 
-svg:not(.active):not(.ctrl) path.link {
-  cursor: pointer;
-}
+    path.link {
+        fill: none;
+        stroke: #000;
+        stroke-width: 4px;
+        cursor: default;
+    }
 
-path.link.selected {
-  stroke-dasharray: 10,2;
-}
+    svg:not(.active):not(.ctrl) path.link {
+        cursor: pointer;
+    }
 
-path.link.dragline {
-  pointer-events: none;
-}
+    path.link.selected {
+        stroke-dasharray: 10, 2;
+    }
 
-path.link.hidden {
-  stroke-width: 0;
-}
+    path.link.dragline {
+        pointer-events: none;
+    }
 
-circle.node {
-  stroke-width: 1.5px;
-  cursor: pointer;
-}
+    path.link.hidden {
+        stroke-width: 0;
+    }
 
-circle.node.reflexive {
-  stroke: #000 !important;
-  stroke-width: 2.5px;
-}
+    circle.node {
+        stroke-width: 1.5px;
+        cursor: pointer;
+    }
 
-text {
-  font: 12px sans-serif;
-  pointer-events: none;
-}
+    circle.node.reflexive {
+        stroke: #000 !important;
+        stroke-width: 2.5px;
+    }
 
-text.id {
-  text-anchor: middle;
-  font-weight: bold;
-}
+    text {
+        font: 12px sans-serif;
+        pointer-events: none;
+    }
+
+    text.id {
+        text-anchor: middle;
+        font-weight: bold;
+    }
+
+    .header {
+        padding: 35px;
+    }
+
+    .item1 {
+        grid-area: header;
+        margin-bottom: 55px;
+    }
+
+    .item2 {
+        grid-area: right;
+    }
+
+    .item3 {
+        grid-area: left;
+    }
+
+    .item4 {
+        grid-area: footer;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'header header header header header header'
+        'left left left right right right '
+        'footer footer footer footer footer footer';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .grid-container > div {
+         text-align: center;
+        padding: 20px 0;
+    }
 
 </style>
 <body>
 
 <!-- Sidebar -->
-<nav class="w3-sidebar w3-animate-top w3-xxlarge" style="display:none;padding-top:150px; background-color: #AACEF0;" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Inicio</a>
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Conceptos</a>
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-beige">Tutorial</a>
-  </div>
+<nav class="w3-sidebar w3-animate-top w3-xxlarge" id="mySidebar"
+     style="display:none;padding-top:150px; background-color: #AACEF0;">
+    <a class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" href="javascript:void(0)"
+       onclick="w3_close()" style="padding:6px 24px">
+        <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Inicio</a>
+        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Conceptos</a>
+        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Tutorial</a>
+    </div>
 </nav>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
-<!-- Header -->
-<div class="w3-opacity">
-<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-<div class="w3-clear"></div>
-<header class="w3-center w3-margin-bottom">
-  <h1>Grafos  y  Más</h1>
-  <p><b>Diseñado para Generar Matrices de Gráficas</b></p>
+    <!-- Header -->
+    <div class="w3-opacity">
+        <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+        <div class="w3-clear"></div>
+        <header class="w3-center w3-margin-bottom">
+            <h1>Grafos y Más</h1>
+            <p><b>Diseñado para Generar Matrices de Gráficas</b></p>
 
-</header>
-</div>
+        </header>
+    </div>
 
-<body>
-{% block content %}
-{% endblock content %}
+    <body>
+    {% block content %}
+    {% endblock content %}
 
+    <script>
+        // Toggle grid padding
+        function myFunction() {
+            var x = document.getElementById("myGrid");
+            if (x.className === "w3-row") {
+                x.className = "w3-row-padding";
+            } else {
+                x.className = x.className.replace("w3-row-padding", "w3-row");
+            }
+        }
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:150px">
-  <a href= "https://github.com/mucinoab/TG" class="fa fa-github hover-opacity">Github</a>
-  <p class="w3-medium" style="color: #232527">By D.M.B.Y.</p>
-</footer>
+        // Open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
 
-<script>
-// Toggle grid padding
-function myFunction() {
-  var x = document.getElementById("myGrid");
-  if (x.className === "w3-row") {
-    x.className = "w3-row-padding";
-  } else {
-    x.className = x.className.replace("w3-row-padding", "w3-row");
-  }
-}
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.width = "100%";
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
-</body>
+    </body>
 </html>
