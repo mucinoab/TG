@@ -18,6 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('graph.urls')),
+    url(r'^', include('index.urls')),
     url(r'^graph/', include('graph.urls')),
+    url(r'^grafica2/', include('grafica2.urls')),
 ]
