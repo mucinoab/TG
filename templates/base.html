@@ -1,259 +1,294 @@
 <!DOCTYPE html>
 <html>
-<title>Graphics and More</title>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta charset="UTF-8">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
-font-awesome.min.css" rel="stylesheet">
-<link href="http://allfont.es/allfont.css?fonts=monoton" rel="stylesheet" type="text/css"/>
-<link href='https://fonts.googleapis.com/css?family=Fauna One' rel="stylesheet">
+  <title>Graphics and More</title>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/
+               font-awesome.min.css" rel="stylesheet">
+  <link href="http://allfont.es/allfont.css?fonts=monoton" rel="stylesheet" type="text/css"/>
+  <link href='https://fonts.googleapis.com/css?family=Fauna One' rel="stylesheet">
 
-<!--  /*latex*/--
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">  
-  </script>
-<--  /*end latex*/-->
-<!-- d3 -->
-<script src="https://d3js.org/d3.v4.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/d3.v3.js"></script>
-<!-- fin d3 -->
-<!--katex-->
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" rel="stylesheet">
+  <!--  /*latex*/--
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <--  /*end latex*/-->
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <!-- fin d3 -->
+    <!--katex-->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+                                  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" rel="stylesheet">
 
-<!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script crossorigin="anonymous" defer
-        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
-        src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script crossorigin="anonymous" defer
+            integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+            src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
 
-<!-- To automatically render math in text elements, include the auto-render extension: -->
-<script crossorigin="anonymous" defer
-        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-        onload="renderMathInElement(document.body);"
-        src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
-<!--fin katex-->
-<!-- jquery-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<style type="text/css">
-    body {
-        /*background-image: url(https://images7.alphacoders.com/427/427412.png);*/
-        background-image: url(https://static.vecteezy.com/system/resources/previews/000/598/564/original/abstract-colorful-low-poly-vector-background-with-warm-gradient-futuristic-pattern.jpg);
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script crossorigin="anonymous" defer
+            integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+            onload="renderMathInElement(document.body);"
+            src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+    <!--fin katex-->
+    <!-- jquery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style type="text/css">
+body {
+  /*background-image: url(https://images7.alphacoders.com/427/427412.png);*/
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/598/564/original/abstract-colorful-low-poly-vector-background-with-warm-gradient-futuristic-pattern.jpg);
 
-        font: 10px sans-serif;
-    }
+  font: 10px sans-serif;
+}
 
     h1 {
-        font-family: "Monoton", arial;
-        color: #FFFFFF;
-        font-size: 48px;
-        text-shadow: 4px 4px 4px #aaa;
+      font-family: "Monoton", arial;
+      color: #FFFFFF;
+      font-size: 48px;
+      text-shadow: 4px 4px 4px #aaa;
     }
 
     p, h3 {
-        font-family: "Fauna one";
-        color: #191919;
-        font-size: 15px;
+      font-family: "Fauna one";
+      color: #191919;
+      font-size: 15px;
     }
 
     canvas {
-        border: 2px solid;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        background-color: #AACEF0;
-        width: 720px;
-        height: 400px;
+      border: 2px solid;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      background-color: #AACEF0;
+      width: 720px;
+      height: 400px;
     }
 
     img {
-        margin-bottom: -7px;
+      margin-bottom: -7px;
     }
 
     .w3-row-padding img {
-        margin-bottom: 12px
+      margin-bottom: 12px
     }
 
     #container {
-        max-width: 650px;
-        height: 400px;
-        margin: auto;
+      max-width: 650px;
+      height: 400px;
+      margin: auto;
     }
 
     #text-explain {
-        display: inline-block;
-        font-size: 0.75em;
-        margin-bottom: 1em;
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 1em;
     }
 
     .alert {
-        color: tomato;
+      color: tomato;
     }
 
     svg {
-        border-style: outset;
-        border-color: #F0BDAA;
-        border-radius: 8px;
-        border-width: 8px;
-        background-color: #FFF;
-        cursor: default;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+      border-style: outset;
+      border-color: #F0BDAA;
+      border-radius: 8px;
+      border-width: 8px;
+      background-color: #FFF;
+      cursor: default;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
     }
 
     svg:not(.active):not(.ctrl) {
-        cursor: crosshair;
+      cursor: crosshair;
     }
 
     path.link {
-        fill: none;
-        stroke: #000;
-        stroke-width: 4px;
-        cursor: default;
+      fill: none;
+      stroke: #000;
+      stroke-width: 4px;
+      cursor: default;
     }
 
     svg:not(.active):not(.ctrl) path.link {
-        cursor: pointer;
+      cursor: pointer;
     }
 
     path.link.selected {
-        stroke-dasharray: 10, 2;
+      stroke-dasharray: 10, 2;
     }
 
     path.link.dragline {
-        pointer-events: none;
+      pointer-events: none;
     }
 
     path.link.hidden {
-        stroke-width: 0;
+      stroke-width: 0;
     }
 
     circle.node {
-        stroke-width: 1.5px;
-        cursor: pointer;
+      stroke-width: 1.5px;
+      cursor: pointer;
     }
 
     circle.node.reflexive {
-        stroke: #000 !important;
-        stroke-width: 2.5px;
+      stroke: #000 !important;
+      stroke-width: 2.5px;
     }
 
     text {
-        font: 12px sans-serif;
-        pointer-events: none;
+      font: 12px sans-serif;
+      pointer-events: none;
     }
 
     text.id {
-        text-anchor: middle;
-        font-weight: bold;
+      text-anchor: middle;
+      font-weight: bold;
     }
 
     .header {
-        padding: 35px;
+      padding: 35px;
     }
 
     .item1 {
-        grid-area: header;
-        margin-bottom: 55px;
+      grid-area: header;
+      margin-bottom: 55px;
     }
 
     .item2 {
-        grid-area: right;
+      grid-area: right;
     }
 
     .item3 {
-        grid-area: left;
+      grid-area: left;
     }
 
     .item4 {
-        grid-area: footer;
+      grid-area: footer;
     }
 
     .grid-container {
-        display: grid;
-        grid-template-areas:
+      display: grid;
+      grid-template-areas:
         'header header header header header header'
-        'left left left right right right '
-        'footer footer footer footer footer footer';
-        grid-gap: 10px;
-        padding: 10px;
+      'left left left right right right '
+      'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
     }
 
     .grid-container > div {
-         text-align: center;
-        padding: 20px 0;
+      text-align: center;
+      padding: 20px 0;
     }
     #myDIV {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: lightblue;
-  margin-top: 20px;
-}
-</style>
-<body>
+      width: 100%;
+      padding: 50px 0;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: 20px;
 
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-animate-top w3-xxlarge" id="mySidebar"
-     style="display:none;padding-top:150px; background-color: #AACEF0;">
-    <a class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" href="javascript:void(0)"
-       onclick="w3_close()" style="padding:6px 24px">
-        <i class="fa fa-remove"></i>
-    </a>
-    <div class="w3-bar-block w3-center">
-        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Inicio</a>
-        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Conceptos</a>
-        <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Tutorial</a>
-    </div>
-</nav>
+      a.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+      a.buttonG{
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+      }
 
-    <!-- Header -->
-    <div class="w3-opacity">
-        <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-        <div class="w3-clear"></div>
-        <header class="w3-center w3-margin-bottom">
+      a.buttonG:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+
+        text-decoration: none;
+        color: initial;
+      }
+
+    }
+    </style>
+    <body>
+
+      <!-- Sidebar -->
+      <nav class="w3-sidebar w3-animate-top w3-xxlarge" id="mySidebar"
+                                                        style="display:none;padding-top:150px; background-color: #AACEF0;">
+        <a class="w3-button w3-white w3-xxlarge w3-padding w3-display-topright" href="javascript:void(0)"
+                                                                                onclick="w3_close()" style="padding:6px 24px">
+          <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+          <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Inicio</a>
+          <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Conceptos</a>
+          <a class="w3-bar-item w3-button w3-text-grey w3-hover-beige" href="#">Tutorial</a>
+        </div>
+      </nav>
+
+      <!-- !PAGE CONTENT! -->
+      <div class="w3-content" style="max-width:1500px">
+
+        <!-- Header -->
+        <div class="w3-opacity">
+          <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+          <div class="w3-clear"></div>
+          <header class="w3-center w3-margin-bottom">
             <h1>Grafos y Más</h1>
             <p><b>Diseñado para Generar Matrices de Gráficas</b></p>
 
-        </header>
-    </div>
+          </header>
+        </div>
 
-    <body>
-    {% block content %}
-    {% endblock content %}
+        <body>
+          {% block content %}
+          {% endblock content %}
 
-    <script>
-        // Toggle grid padding
-        function myFunction() {
-            var x = document.getElementById("myGrid");
-            if (x.className === "w3-row") {
+          <script>
+            // Toggle grid padding
+            function myFunction() {
+              var x = document.getElementById("myGrid");
+              if (x.className === "w3-row") {
                 x.className = "w3-row-padding";
-            } else {
+              } else {
                 x.className = x.className.replace("w3-row-padding", "w3-row");
+              }
             }
-        }
 
-        // Open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.width = "100%";
-            document.getElementById("mySidebar").style.display = "block";
-        }
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
-    </script>
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+          </script>
 
-    </body>
+        </body>
 </html>
