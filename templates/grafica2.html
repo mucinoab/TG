@@ -291,7 +291,7 @@
 
             for (var y = 0; y < links.length; y++) {
                 lista_ady[links[y].source.id].lista.push(links[y].target.id);
-                
+                //lista_ady[links[y].target.id].lista.push(links[y].source.id);
             }
             for (var y = 0; y < nodes.length; y++) {
                 console.log("-" + lista_ady[y].nodo);
