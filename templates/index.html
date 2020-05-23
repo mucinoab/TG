@@ -1,5 +1,11 @@
 {%extends 'base.html'%}
 {%block content%}
- <a href="/graph" class="button"><span>dirigida</span></a>
- <a href="/grafica2" class="button"><span>no dirigida</span></a>
+
+<form>
+  <button formaction="/graph">Dirigida</button>
+</form>
+
+<form>
+  <button formaction="/grafica2">No Dirigida</button>
+</form>
 {%endblock content%}
