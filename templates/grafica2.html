@@ -16,6 +16,10 @@
             <h3 id="matriz_incidencia" style="text-align: center;"></h3>
         </div>
         <div class="item4">
+            <p>Datos del grafo</p>
+            <h3 id="datos" style="text-align: center;"></h3>
+        </div>
+        <div class="item5">
                 <!-- Footer -->
                 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:150px">
                     <a class="fa fa-github hover-opacity" href="https://github.com/mucinoab/TG">Github</a>
@@ -282,6 +286,10 @@
 
             var array = [];
             var lis = {};
+
+            var datitos = {
+                "bucles":"no"
+            };
              function addValueToList(key, value) {              
                 lis[key] = lis[key] || [];
                 lis[key].push(value);
@@ -291,6 +299,7 @@
                 lis[nodes[y].id] =[];
                 if (nodes[y].reflexive == true){
                     addValueToList(nodes[y].id,nodes[y].id);
+                    datitos["bucles"] = "si";
                    
                 }
             }
@@ -313,10 +322,10 @@
             for(var y = 0; y < lista_ady.length;y++){
                 console.log(lista_ady[y]);
             }
-            
+            var h = "\\text{Tiene bucles:}"+datitos["bucles"]+"\\\\";
+            katex.render(h,datos);
             returnJsonTop(lista_ady);
             //returnJsonTop(links);
-
         }
 
         //ajax si
