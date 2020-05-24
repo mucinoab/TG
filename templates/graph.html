@@ -1,8 +1,33 @@
 {%extends 'base.html'%}
 {%block content%}
-
+<style>
+    p{
+        color: white;
+        margin-left: 70px;
+        font-size: 19px;
+    }
+ 
+</style>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
+<p style="font-size: 21px; margin-left: 90px;">Instrucciones: </p>
+<p> 
+    1. Presiona "ctrl" y al mismo tiempo  selecciona un nodo para poder arrastrarlo (puedes hacer isomorfismos, mientras mantengas presionado "ctrl" podras arrastrarlo)<br>
+    3. Al dar click en un nodo puedes efectuar las siguientes acciones:<br>
+    &nbsp;&nbsp;-Presione "r" para hacerlo reflexivo.<br>
+    &nbsp;&nbsp;-Presione "delete" o "supr" para borrarlo.<br>
+    4. Para unir dos nodos, haz click en un nodo y arrastra el mouse hacia donde lo quieras unir.<br>
+    5. Si quieres cambiar la dirección de la arista borra la flecha actual y realiza los mismo pasos para unir los nodos.<br><br>
+
+    Uso de aristas:<br>
+    -Si quieres convertir un arista en paralelo basta con seleccionar la arista (si esta seleccionada se pondra punteada) y presionar b, observaras como se convierte en bidireccional, si quieres que regrese a ser unidireccional vuelve a presionar b.<br>
+    -Borrar un arista: seleccionala y presiona "del" o "supr" para borrarla.<br><br> 
+    
+    IMPORTANTE:<br>
+    Cuando hayas terminado de dibujar tu gráfica, da doble click en cualquier nodo , para que las matrices actualicen, ya que de lo contrario, las matrices estarán incorrectas.<br> 
+
+
+</p>
     <div class="grid-container">
         <div class="item1">
            <div id="container"></div>
