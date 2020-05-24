@@ -47,25 +47,38 @@ class matrix:
         G.add_edges_from(edges)
         incidence_matrix = nx.incidence_matrix(G, nodelist=nodes, oriented=True)
         incidence_matrix = incidence_matrix.toarray()
-        print(incidence_matrix)
         
         nodes = np.array(nodes)
         edgesc = np.array(edgesc)
         incidence_matrix  = np.array(incidence_matrix)        
 
+      
+        pop = []
+        cta = 0
+        for a in edges:
+            if(a[0] == a[1]):
+                pop.append((cta,a[0]))
+            cta+=1
+        cta = 0
+        for  a in nodes:
+            for  b in pop:
+                if(nodes[cta] == b[1]):
+                    incidence_matrix[cta,b[0]] = 1001
+            cta+=1    
         b = np.zeros((len(nodes) + 1,len(edgesc) + 1),object)
-
+        print(pop)    
+        print(incidence_matrix)
         b[1:,1:]=incidence_matrix
         b[0,1:]=edgesc
         b[1:,0]=nodes
         b[0,0]='100000000001'
         #printer = np.vectorize(lambda edgesc:'{0:5}'.format(edgesc,))
-        #nodes = nodes.astype(str)
-        print (latex(Matrix(b)))
+        #nodes = nodes.astype(str)      
         #df = pandas.DataFrame(incidence_matrix, columns=edgesc, index=nodes).to_numpy()
         #print(df) # 
         n = latex(Matrix(b))
         n = n.replace("100000000001"," ")
+        n = n.replace("1001","\\pm 1")
         M = latex(Matrix(incidence_matrix))
         M = re.sub(r'1\.0', r'\\textbf{1}', M)  # s
         M = re.sub(r'0\.0', r'0', M)  # ceros
@@ -79,7 +92,7 @@ def returnjson(request):
         data = json.loads(request.body)
         nodos = []
         edges = []
-        edgesc = [  ]
+        edgesc = []
         for a in range(0, len(data)):
             nodos.append(int(data[a]['nodo']))
             for b in range(0, len(data[a]['lista'])):
