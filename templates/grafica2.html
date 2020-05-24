@@ -17,7 +17,8 @@
         </div>
         <div class="item4">
             <p>Datos del grafo</p>
-            <h3 id="datos" style="text-align: center;"></h3>
+            <h3 id="datos" style="text-align: center;"></h3>       
+            <!--<h3 id="sim" style="text-align: center;"></h3> -->
         </div>
         <div class="item5">
                 <!-- Footer -->
@@ -351,6 +352,8 @@
             //document.getElementById("demo").innerHTML = data['adya'];
             katex.render(data['adya'], matriz_adyacencia);
             katex.render(data['inci'], matriz_incidencia);
+            var t = "\\text{Es simétrica:}" + data["sim"];
+            //katex.render(t,sim);
         }
 
         function mousedown() {

@@ -58,7 +58,8 @@ class matrix:
             for b in range(0,len(nodes)):
                 if(incidence_matrix[b,a] == 1 or incidence_matrix[b,a] == -1):
                     actual.append(nodes[b])
-            top.append((actual[0],actual[1]))
+            if(actual[0] != actual[1]): 
+                top.append((actual[0],actual[1]))
         print(top)
         b = np.zeros((len(nodes) + 1,len(edgesc) + 1),object)
 
@@ -79,7 +80,15 @@ class matrix:
         M = re.sub(r'1\.0', r'\\textbf{1}', M)  # s
         M = re.sub(r'0\.0', r'0', M)  # ceros
         return n
-
+    def simetric(self,nodes):
+        nodes = np.array(nodes)
+        nodest= np.array(nodes)
+        check = nodes == nodest
+        ver = check.all()
+        if(ver):
+            return "si"
+        else:
+            return "no"
 
 @csrf_exempt
 def returnjson(request):
@@ -98,17 +107,18 @@ def returnjson(request):
         op = []
         k = []
         lop = []
-        op = list(set(tuple(sorted(p)) for p in edges))
+        op= list(set(tuple(sorted(p)) for p in edges))
         for a in op:
             if(a[0] != a[1]):
-                k.append([a[0],a[1]])
+                k.append((a[0],a[1]))
         k.sort()
         for a in k:
             lop.append(str(a[0])+','+str(a[1]))
         
         m = matrix()
         context['adya'] = m.adyacencia(nodos, edges,edgesc)
-        context['inci'] = m.incidencia(nodos,op,lop)
+        context['inci'] = m.incidencia(nodos,k,lop)
+        context['sim'] = m.simetric(nodos)
         request.session['context'] = context
         return HttpResponse("ok")
 
