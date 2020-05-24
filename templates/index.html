@@ -1,45 +1,46 @@
 {%extends 'base.html'%}
 {%block content%}
-<style>
-  h3
-  {
-    color: white;
-    font-size: 16px;
-    margin-left: 130px;
-    margin-top: 20px;
-  }
-  button 
-  {
-    background-color: #3ACF74;
-    border:2px solid #FFE873;
-    border-radius: 12px;
-    color: white;
-    padding: 25px 52px;
-    text-align: center;
-    font-size: 18px;
-    margin: 4px 2px;
-    cursor: pointer;
-    margin:20px ;
-    margin-bottom:20px;
-    margin-left: 200px;
-  }
-</style>
-
-  <h3>Escoga la gráfica que desea dibujar: </h3>
-<form>
-  <button  formaction="/graph">Dirigida</button>
-</form>
-
-<form>
-  <button formaction="/grafica2">No Dirigida</button>
-</form>
 <br>
-<br>
-  <h3 margin-left: 220px;>
-    Está pagina fue creada por:<br>
-      -Bruno Muciño<br>
-      -Diana Paredes<br>
-      -Marleen Muñoz<br>
-      -Yollolt Tamayo<br>
+<h3>
+  Una gráfica consiste en un conjunto de objetos llamados vértices y un conjunto de líneas relacionados entre sí, de tal forma que a cada línea se le asocia un par de vértices.
+<br><br>
+  Para analizar las caracterísitcas de una gráfica, es posible hacer una representación matricial de la misma en dos modalidades:</h3>
+  <h4>Matríz de Incidencia</h4>
+  <h4>Matríz de Adyacencia</h4>
+  <br>
+  <h3>
+    Matríz de Incidencia
   </h3>
+  <h4>
+    Gráficas no dirigidas: Relación vértices-aristas: 1 si los vértices son incidentes, 0 de lo contrario.</h4>
+    <h4>Gráficas dirigidas: Relación vértices-vértices: 1 si el vértice es el inicio, -1 si el vértice es el fin, 0 si no son incidentes.
+  </h4>
+  <br>
+  <h3>
+    Matríz de Adyacencia
+  </h3>
+  <h4>
+    Gráficas no dirigidas: Relación vértices-aristas: 1 si los vértices son adyacentes, 0 de lo contrario.</h4>
+    <h4>Gráficas dirigidas: Relación vértices-vértices: 1 si una lénea sale de vi a vj, 0 de lo contrario.
+  </h4>
+<br>
+<h3>Obtener la matríz de incidencia y adyacencia de una gráfica:</h3>
+
+<form>
+  <button class=" button" formaction="/graph">Dirigida</button>
+</form>
+<br>
+<form>
+  <button class="button" formaction="/grafica2"> No Dirigida</button>
+</form>
+<br>
+<h5>Este sistema fue creado por: </h5>
+<h6>
+  Muciño Bruno</h6>
+  <h6>Muñoz Marleen</h6>
+  <h6>Paredes Diana</h6>
+  <h6>Tamayo Yollotl</h6>
+
+</h6>
+
 {%endblock content%}
