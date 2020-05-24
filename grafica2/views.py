@@ -47,18 +47,26 @@ class matrix:
         G.add_edges_from(edges)
         incidence_matrix = nx.incidence_matrix(G, nodelist=nodes, oriented=True)
         incidence_matrix = incidence_matrix.toarray()
-        print(incidence_matrix)
-        
+        #print(incidence_matrix)
+        actual = []
+        top = []
         nodes = np.array(nodes)
         edgesc = np.array(edgesc)
-        incidence_matrix  = np.array(incidence_matrix)        
-
+        incidence_matrix  = np.array(incidence_matrix)                
+        for a in range(0,len(edgesc)):
+            actual = []
+            for b in range(0,len(nodes)):
+                if(incidence_matrix[b,a] == 1 or incidence_matrix[b,a] == -1):
+                    actual.append(nodes[b])
+            top.append((actual[0],actual[1]))
+        print(top)
         b = np.zeros((len(nodes) + 1,len(edgesc) + 1),object)
 
         b[1:,1:]=incidence_matrix
-        b[0,1:]=edgesc
+        b[0,1:]=top
         b[1:,0]=nodes
         b[0,0]='100000000001'
+
         #printer = np.vectorize(lambda edgesc:'{0:5}'.format(edgesc,))
         #nodes = nodes.astype(str)
         #print (latex(Matrix(b)))
@@ -66,7 +74,7 @@ class matrix:
         #print(df) # 
         n = latex(Matrix(b))
         n = n.replace("100000000001"," ")
-        n = n.replace("-1","1   ")
+        n = n.replace("-1","1")
         M = latex(Matrix(incidence_matrix))
         M = re.sub(r'1\.0', r'\\textbf{1}', M)  # s
         M = re.sub(r'0\.0', r'0', M)  # ceros
@@ -94,12 +102,13 @@ def returnjson(request):
         for a in op:
             if(a[0] != a[1]):
                 k.append([a[0],a[1]])
+        k.sort()
         for a in k:
             lop.append(str(a[0])+','+str(a[1]))
-        print(lop)
+        
         m = matrix()
         context['adya'] = m.adyacencia(nodos, edges,edgesc)
-        context['inci'] = m.incidencia(nodos, k,lop)
+        context['inci'] = m.incidencia(nodos,op,lop)
         request.session['context'] = context
         return HttpResponse("ok")
 
