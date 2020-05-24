@@ -66,6 +66,7 @@ class matrix:
         #print(df) # 
         n = latex(Matrix(b))
         n = n.replace("100000000001"," ")
+        n = n.replace("-1","1")
         M = latex(Matrix(incidence_matrix))
         M = re.sub(r'1\.0', r'\\textbf{1}', M)  # s
         M = re.sub(r'0\.0', r'0', M)  # ceros
@@ -83,12 +84,17 @@ def returnjson(request):
         for a in range(0, len(data)):
             nodos.append(int(data[a]['nodo']))
             for b in range(0, len(data[a]['lista'])):
-                edges.append( [int(data[a]['nodo']), int(data[a]['lista'][b])])
+                edges.append( (int(data[a]['nodo']), int(data[a]['lista'][b])))
                 edgesc.append(str(data[a]['nodo']) + ','+str(data[a]['lista'][b]))
         #print(nodos, edges)
+        op = []
+        l = list(set(tuple(sorted(p)) for p in edges))
+        for n in l:
+            op.append(str(n[0])+','+str(n[1]))
+        print(op)
         m = matrix()
         context['adya'] = m.adyacencia(nodos, edges,edgesc)
-        context['inci'] = m.incidencia(nodos, edges,edgesc)
+        context['inci'] = m.incidencia(nodos, l,op)
         request.session['context'] = context
         return HttpResponse("ok")
 
