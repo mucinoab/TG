@@ -45,7 +45,7 @@ class matrix:
         G = nx.DiGraph()
         G.add_nodes_from(nodes)
         G.add_edges_from(edges)
-        incidence_matrix = nx.incidence_matrix(G, nodelist=nodes, oriented=True)
+        incidence_matrix = -nx.incidence_matrix(G, nodelist=nodes, oriented=True)
         incidence_matrix = incidence_matrix.toarray()
         
         nodes = np.array(nodes)
