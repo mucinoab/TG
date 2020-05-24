@@ -61,12 +61,12 @@ class matrix:
         b[0,0]='100000000001'
         #printer = np.vectorize(lambda edgesc:'{0:5}'.format(edgesc,))
         #nodes = nodes.astype(str)
-        print (latex(Matrix(b)))
+        #print (latex(Matrix(b)))
         #df = pandas.DataFrame(incidence_matrix, columns=edgesc, index=nodes).to_numpy()
         #print(df) # 
         n = latex(Matrix(b))
         n = n.replace("100000000001"," ")
-        n = n.replace("-1","1")
+        n = n.replace("-1","1   ")
         M = latex(Matrix(incidence_matrix))
         M = re.sub(r'1\.0', r'\\textbf{1}', M)  # s
         M = re.sub(r'0\.0', r'0', M)  # ceros
@@ -84,17 +84,22 @@ def returnjson(request):
         for a in range(0, len(data)):
             nodos.append(int(data[a]['nodo']))
             for b in range(0, len(data[a]['lista'])):
-                edges.append( (int(data[a]['nodo']), int(data[a]['lista'][b])))
+                edges.append((int(data[a]['nodo']), int(data[a]['lista'][b])))
                 edgesc.append(str(data[a]['nodo']) + ','+str(data[a]['lista'][b]))
         #print(nodos, edges)
         op = []
-        l = list(set(tuple(sorted(p)) for p in edges))
-        for n in l:
-            op.append(str(n[0])+','+str(n[1]))
-        print(op)
+        k = []
+        lop = []
+        op = list(set(tuple(sorted(p)) for p in edges))
+        for a in op:
+            if(a[0] != a[1]):
+                k.append([a[0],a[1]])
+        for a in k:
+            lop.append(str(a[0])+','+str(a[1]))
+        print(lop)
         m = matrix()
         context['adya'] = m.adyacencia(nodos, edges,edgesc)
-        context['inci'] = m.incidencia(nodos, l,op)
+        context['inci'] = m.incidencia(nodos, k,lop)
         request.session['context'] = context
         return HttpResponse("ok")
 
