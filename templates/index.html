@@ -1,8 +1,33 @@
 {%extends 'base.html'%}
 {%block content%}
+<style>
+  h3
+  {
+    color: white;
+    font-size: 16px;
+    margin-left: 130px;
+    margin-top: 20px;
+  }
+  button 
+  {
+    background-color: #3ACF74;
+    border:2px solid #FFE873;
+    border-radius: 12px;
+    color: white;
+    padding: 25px 52px;
+    text-align: center;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin:20px ;
+    margin-bottom:20px;
+    margin-left: 200px;
+  }
+</style>
 
+  <h3>Escoga la gráfica que desea dibujar: </h3>
 <form>
-  <button formaction="/graph">Dirigida</button>
+  <button  formaction="/graph">Dirigida</button>
 </form>
 
 <form>
