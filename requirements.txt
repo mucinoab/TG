@@ -14,7 +14,7 @@ static3==0.7.0
 pandas==1.1.0
 whitenoise==5.1.0
 decorator==4.4.2
-Django==3.0.9
+Django==3.1
 networkx==2.4
 numpy==1.19.1
 pytz==2020.1
