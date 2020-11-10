@@ -1,4 +1,4 @@
-asgiref==3.3.0
+asgiref==3.3.1
 networkx==2.5
 cycler==0.10.0
 decorator==4.4.2
