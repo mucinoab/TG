@@ -20,4 +20,4 @@ numpy==1.19.4
 pytz==2020.4
 scipy==1.5.4
 sqlparse==0.4.1
-sympy==1.7
+sympy==1.7.1
