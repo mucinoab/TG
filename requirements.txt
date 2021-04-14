@@ -1,7 +1,7 @@
 asgiref==3.3.4
 networkx==2.5.1
 cycler==0.10.0
-decorator==5.0.5
+decorator==5.0.7
 dj-database-url==0.5.0
 dj-static==0.0.6
 django-heroku==0.3.1
@@ -13,7 +13,7 @@ pyparsing==2.4.7
 static3==0.7.0
 pandas==1.2.3
 whitenoise==5.2.0
-decorator==5.0.5
+decorator==5.0.7
 Django==3.2
 networkx==2.5.1
 numpy==1.20.2
